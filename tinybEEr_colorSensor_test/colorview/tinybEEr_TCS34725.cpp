@@ -66,8 +66,17 @@ void tinybEEr_TCS34725::getRGBC (uint16_t *r, uint16_t *g, uint16_t *b, uint16_t
 {
   *c = readRegword(TCS34725_CDATAL);
   *r = readRegword(TCS34725_RDATAL);
+  if (*r > 255) {
+    *r = 255;
+  }
   *g = readRegword(TCS34725_GDATAL);
+  if (*g > 255) {
+    *g = 255;
+  }
   *b = readRegword(TCS34725_BDATAL);
+  if (*b > 255) {
+    *b = 255;
+  }
   switch (_tcs34725IntegrationTime)
   {
     case TCS34725_INTEGRATIONTIME_2_4MS:

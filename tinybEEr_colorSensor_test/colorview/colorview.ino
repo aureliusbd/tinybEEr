@@ -1,7 +1,7 @@
 
 #include "tinybEEr_TCS34725.h"
 
-tinybEEr_TCS34725 tcs = tinybEEr_TCS34725(&Wire, TCS34725_ADDRESS,TCS34725_INTEGRATIONTIME_50MS, TCS34725_GAIN_4X);
+tinybEEr_TCS34725 tcs = tinybEEr_TCS34725(&Wire, TCS34725_ADDRESS,TCS34725_INTEGRATIONTIME_50MS, TCS34725_GAIN_1X);
 
 float r, b, g;
 
@@ -30,6 +30,6 @@ void loop() {
   rgb = ((long)red <<16L) | ((long)green <<8L) | (long)blue;
   Serial.println("\tHex:\t" + String(rgb, HEX) + "\t");
   Serial.println();
-  delay(10000);
+  delay(2000);
 }
 
