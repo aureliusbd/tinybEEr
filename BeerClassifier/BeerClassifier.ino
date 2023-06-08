@@ -163,6 +163,9 @@ void loop()
         ei_printf("    %s: %.5f\n", result.classification[ix].label, result.classification[ix].value);
     }
 
+    Serial.println("pH:");
+    Serial.println(GetPhValue());
+
     // More detailed predictions below...
 
 }
