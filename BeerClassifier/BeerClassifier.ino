@@ -60,44 +60,18 @@ float GetTurbValue()
   return turbV;
 }
 
-// void loop()
-// {
-
-//   // pH sensor data and calibration
-//   static float phValue = GetPhValue();
-//   static float turbValue = GetTurbValue();
-
-//   Serial.print("\tpH_Volt:\t");
-//   Serial.print(phValue);
-//   Serial.print("\tturbV:\t");
-//   Serial.print(turbValue);
-//   Serial.println();
-
-  
-
-//   lcd.setCursor(0,0);
-//   lcd.print("pH: ");
-//   lcd.print(phValue);
-//   lcd.setCursor(0,1);
-//   lcd.print("turb: ");
-//   lcd.print(turbValue);
-
-//   delay(10000);
-//   lcd.clear();
-// }
-
 /* ------------------------------ Start of model code --------------------------------- */
 
 /** Audio buffers, pointers and selectors */
-typedef struct {
-    int16_t *buffer;
-    uint8_t buf_ready;
-    uint32_t buf_count;
-    uint32_t n_samples;
-} inference_t;
+// typedef struct {
+//     int16_t *buffer;
+//     uint8_t buf_ready;
+//     uint32_t buf_count;
+//     uint32_t n_samples;
+// } inference_t;
 
-static inference_t inference;
-static signed short sampleBuffer[2048];
+// static inference_t inference;
+// static signed short sampleBuffer[2048];
 
 /**
  * @brief      Arduino setup function
@@ -165,7 +139,4 @@ void loop()
 
     Serial.println("pH:");
     Serial.println(GetPhValue());
-
-    // More detailed predictions below...
-
 }
